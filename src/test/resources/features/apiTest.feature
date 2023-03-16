@@ -1,5 +1,6 @@
 Feature: smoke api test
 
   @JEBRIL
-  Scenario: smoke api test for fresh frmwrk
-    Given I send a rest get request
+  Scenario: example of how to send a post request
+    When I send a rest post request to "/some/endpoint" leveraging "test" json file for "URL"
+    Then I verify response status code is "403"
