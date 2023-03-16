@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-public class ReadConfigFile {
+public class ReadPropertiesFile {
 
     public static Map<String, String> readProperties() throws FileNotFoundException, IOException {
 
@@ -26,7 +26,7 @@ public class ReadConfigFile {
         } else if (defaultEnv != null && defaultEnv.equalsIgnoreCase("UAT1")) {
             propFilePath = Paths.get("src", "test", "resources", "data", "UAT1", "user.properties").toString() + File.separator;
         } else if (defaultEnv == null) {
-            System.out.println("Env not defined via CMD, hence defaulting to DEV1, if you want to default to a diff env, please make an update in ReadConfigFile.java");
+            System.out.println("Env not defined via CMD, hence defaulting to DEV1, if you want to default to a diff env, please make an update in ReadPropertiesFile.java");
             propFilePath = Paths.get("src", "test", "resources", "data", "DEV1", "user.properties").toString() + File.separator;
         } else {
             throw new RuntimeException("Default environment is not recognized");

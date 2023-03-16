@@ -3,7 +3,7 @@ package com.yourdomain.stepDef.support;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import com.yourdomain.util.ReadConfigFile;
+import com.yourdomain.util.ReadPropertiesFile;
 import com.yourdomain.util.TestDataRetriever;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -33,7 +33,7 @@ public class Hooks {
 
         // Read & prepare the Config for the entire system
         try {
-            TestDataRetriever.myData = ReadConfigFile.readProperties();
+            TestDataRetriever.myData = ReadPropertiesFile.readProperties();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
