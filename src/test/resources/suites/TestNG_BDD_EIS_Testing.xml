@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="EIS Regression Testing Suite" parallel="tests" thread-count="10" data-provider-thread-count="6" verbose="2">
+    <test name="BDD with API Prototype">
+        <classes>
+            <class name="apprunner.RunCucumberTest"/>
+        </classes>
+    </test>
+</suite>

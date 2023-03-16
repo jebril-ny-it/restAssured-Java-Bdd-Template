@@ -1,0 +1,14 @@
+{
+  "name": "Jebril",
+  "gender": "Male",
+  "age": 30,
+  "address": {
+    "street": "87",
+    "city": "Brooklyn",
+    "state": "NY",
+    "postalCode": "11218"
+  },
+  "phoneNumber": [
+    { "type": "personal", "number": "116263747" }
+  ]
+}
