@@ -57,7 +57,7 @@ public class ApiSteps {
         Response response =
                 given()
                         .header("Content-Type", "application/json")
-                        .header("Authorization", "yourAuth")
+                        //.header("Authorization", "yourAuth")
                         .accept(ContentType.JSON)
                         .body(jsonRequestBody)
                         .when()
@@ -106,5 +106,15 @@ public class ApiSteps {
 
         // This step will store the status code into the data store for future use
         pageRetriever.getDataStore().put(FieldData.RESPONSE_STATUS_CODE, String.valueOf(response.statusCode()));
+        pageRetriever.getDataStore().put(FieldData.RESPONSE_BODY, String.valueOf(response.prettyPrint()));
+    }
+
+    /**
+     * This executable specification will log the full response to the console
+     * */
+    @Then("I extract the full response to the console")
+    public void iExtractTheFullResponseToTheConsole() {
+        String responseBody = (String) pageRetriever.getDataStore().get(FieldData.RESPONSE_BODY);
+        System.out.println("The full response I stored and that I am now fetching from my data store -> " + responseBody);
     }
 }
