@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
 		features = {"src/test/resources/"}, 
 		glue={"com/yourdomain/stepDef/steps", "com/yourdomain/stepDef/support"},
 		plugin = {"pretty", "json:target/cucumber-reports/cucumber.json", "html:target/cucumber-reports"}, 
-		tags = {"@JEBRIL"},
+		tags = {"@smoke"},
 		monochrome=true,
 		dryRun = false
 		)
